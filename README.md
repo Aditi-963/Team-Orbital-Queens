@@ -13,14 +13,14 @@
 
 ## 📖 Overview
 
-**CropOrbit AI** is an intelligent agriculture monitoring platform that combines **satellite remote sensing** with **artificial intelligence** to:
+**CropOrbit AI** is an intelligent agriculture monitoring platform that combines **satellite remote sensing** with **artificial intelligence** to deliver actionable farm insights – all without any on‑ground sensors.
 
-- 🔍 **Detect crop type** automatically (92% accuracy)
-- 💧 **Identify moisture stress** levels (Healthy / Moderate / Severe)
-- 📈 **Monitor growth stages** (Germination → Vegetative → Flowering → Maturity)
-- ⏰ **Generate precise irrigation recommendations** (when & how much)
+It automatically:
 
-All of this works **without any on‑ground sensors** – making it affordable, scalable, and accessible to every farmer.
+- 🔍 **Detects crop type** (wheat, rice, cotton, sugarcane, maize) with **92%** accuracy  
+- 💧 **Identifies moisture stress** (healthy / moderate / severe)  
+- 📈 **Tracks growth stages** (germination → vegetative → flowering → maturity)  
+- ⏰ **Generates precise irrigation recommendations** – when and how much water to apply  
 
 > *“Democratizing precision agriculture using satellite intelligence.”*
 
@@ -28,7 +28,7 @@ All of this works **without any on‑ground sensors** – making it affordable, 
 
 ## 🎯 Problem Statement
 
-Agriculture is the backbone of India, yet farmers face critical challenges:
+Indian agriculture is plagued by:
 
 | Challenge | Impact |
 |-----------|--------|
@@ -44,15 +44,28 @@ Agriculture is the backbone of India, yet farmers face critical challenges:
 
 ## 💡 Our Solution – CropOrbit AI
 
-We bridge the gap between space technology and the farmer’s field:
+We bridge space technology and the farmer’s field:
 
-| Benefit | How |
-|---------|-----|
-| ✅ Satellite‑based monitoring | Uses free optical & SAR data (Sentinel‑1/2, MODIS, ISRO Bhuvan) |
+| Benefit | How We Deliver |
+|---------|----------------|
+| ✅ Satellite‑based monitoring | Free optical & SAR data (Sentinel‑1/2, MODIS, ISRO Bhuvan) |
 | ✅ AI‑powered analytics | Crop classification, stress detection, growth stage prediction |
 | ✅ Actionable irrigation advice | Tells **when** and **how much** water to apply |
-| ✅ No hardware required | Works entirely from space |
-| ✅ Nationwide scalability | Works on any farm in India |
+| ✅ No hardware required | Works entirely from space – zero on‑ground installation |
+| ✅ Nationwide scalability | Works on any farm across India |
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| 🌾 **Crop Type Detection** | Identifies 5 major crops with **92%** accuracy |
+| 💧 **Moisture Stress Detection** | Classifies stress into Healthy / Moderate / Severe |
+| 📈 **Growth Stage Monitoring** | Uses LSTM to track the entire crop lifecycle |
+| ⏰ **Irrigation Advisory** | Recommends timing and water volume (in mm) |
+| 🗺️ **Interactive Dashboard** | Farm map, health indicators, trends, and alerts |
+| 📱 **Farmer‑Friendly** | (Planned) Mobile app with multilingual support |
 
 ---
 
@@ -72,8 +85,6 @@ flowchart TD
     D1[XGBoost + RF Ensemble<br>(Crop Type)<br>Random Forest<br>(Stress Detection)<br>LSTM<br>(Growth Stages)] --> D
     E1[Irrigation scheduling<br>Water requirement<br>Alerts & notifications] --> E
     F1[React + TypeScript<br>Leaflet maps<br>Real‑time analytics<br>Advisory cards] --> F
-The diagram above illustrates the end‑to‑end data flow – from satellite imagery to actionable farmer advisories.
-
 🛠️ Technology Stack
 Layer	Technology
 Frontend	React 18, TypeScript, TailwindCSS, Leaflet.js, Chart.js
@@ -230,3 +241,5 @@ Pradhan Mantri Krishi Sinchai Yojana for inspiration
 “Technology should serve the farmer – not the other way around.”
 
 🌱 CropOrbit AI – Smarter irrigation. Better harvests. A sustainable future.
+
+text
