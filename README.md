@@ -1,4 +1,3 @@
-markdown
 # 🌾 CropOrbit AI
 
 **Precision Farming Powered From Space**  
