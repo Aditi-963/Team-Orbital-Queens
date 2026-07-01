@@ -1,104 +1,80 @@
-# Team-Orbital-Queens
-🌾 CropOrbit AI
-Precision Farming Powered From Space
-🚀 ISRO BAH 2026 Hackathon – Team Orbital Queens
+markdown
+# 🌾 CropOrbit AI
 
-https://img.shields.io/badge/python-3.9+-blue.svg
-https://img.shields.io/badge/FastAPI-0.68+-green.svg
-https://img.shields.io/badge/React-18.0+-blue.svg
-https://img.shields.io/badge/TensorFlow-2.0+-orange.svg
-https://img.shields.io/badge/License-MIT-yellow.svg
+**Precision Farming Powered From Space**  
+🚀 *ISRO BAH 2026 Hackathon – Team Orbital Queens*
 
-📖 Overview
-CropOrbit AI is an intelligent agriculture monitoring platform that leverages satellite remote sensing and artificial intelligence to:
+[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.68+-green.svg)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18.0+-blue.svg)](https://reactjs.org)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://tensorflow.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Detect crop type automatically
+---
 
-Identify moisture stress levels in fields
+## 📖 Overview
 
-Monitor crop growth stages over time
+**CropOrbit AI** is an intelligent agriculture monitoring platform that combines **satellite remote sensing** with **artificial intelligence** to:
 
-Generate precise irrigation recommendations
+- 🔍 **Detect crop type** automatically (92% accuracy)
+- 💧 **Identify moisture stress** levels (Healthy / Moderate / Severe)
+- 📈 **Monitor growth stages** (Germination → Vegetative → Flowering → Maturity)
+- ⏰ **Generate precise irrigation recommendations** (when & how much)
 
-All of this is done without any on‑ground sensors – making it affordable, scalable, and accessible to every farmer.
+All of this works **without any on‑ground sensors** – making it affordable, scalable, and accessible to every farmer.
 
-"Democratizing precision agriculture using satellite intelligence."
+> *“Democratizing precision agriculture using satellite intelligence.”*
 
-🎯 Problem Statement
-Agriculture is the backbone of India, yet farmers face immense challenges:
+---
 
-Challenge	Impact
-❌ Over‑irrigation	Wastes up to 50% of water
-❌ Late stress detection	Crop damage before visible symptoms
-❌ Manual monitoring	Doesn't scale for large farms
-❌ Expensive IoT sensors	Unaffordable for smallholders
-❌ No data‑driven advice	Irrigation decisions based on guesswork
-Result: India loses ₹45,000+ crore annually due to inefficient irrigation and poor crop management.
+## 🎯 Problem Statement
 
-💡 Our Solution – CropOrbit AI
+Agriculture is the backbone of India, yet farmers face critical challenges:
+
+| Challenge | Impact |
+|-----------|--------|
+| ❌ Over‑irrigation | Wastes up to **50%** of water |
+| ❌ Late stress detection | Crop damage before visible symptoms |
+| ❌ Manual monitoring | Doesn't scale for large farms |
+| ❌ Expensive IoT sensors | Unaffordable for smallholders |
+| ❌ No data‑driven advice | Irrigation decisions based on guesswork |
+
+**Result:** India loses **₹45,000+ crore** annually due to inefficient irrigation and poor crop management.
+
+---
+
+## 💡 Our Solution – CropOrbit AI
+
 We bridge the gap between space technology and the farmer’s field:
 
-✅ Satellite‑based monitoring – uses free optical & SAR data (Sentinel‑1/2, MODIS, ISRO Bhuvan)
+| Benefit | How |
+|---------|-----|
+| ✅ Satellite‑based monitoring | Uses free optical & SAR data (Sentinel‑1/2, MODIS, ISRO Bhuvan) |
+| ✅ AI‑powered analytics | Crop classification, stress detection, growth stage prediction |
+| ✅ Actionable irrigation advice | Tells **when** and **how much** water to apply |
+| ✅ No hardware required | Works entirely from space |
+| ✅ Nationwide scalability | Works on any farm in India |
 
-✅ AI‑powered analytics – crop classification, stress detection, growth stage prediction
+---
 
-✅ Actionable irrigation advice – tells when and how much water to apply
+## 🏗️ System Architecture
 
-✅ No hardware required – works entirely from space
+```mermaid
+flowchart TD
+    A[Data Acquisition] --> B[Preprocessing]
+    B --> C[Feature Extraction]
+    C --> D[AI / ML Models]
+    D --> E[Decision Engine]
+    E --> F[User Dashboard]
 
-✅ Nationwide scalability – works on any farm in India
+    A1[Sentinel‑1 SAR<br>Sentinel‑2 Optical<br>MODIS / ISRO Bhuvan<br>Weather APIs] --> A
+    B1[Cloud masking<br>Radiometric calibration<br>Geometric correction<br>Speckle filtering<br>Resampling] --> B
+    C1[NDVI · NDWI · EVI · SAVI<br>Soil Moisture Index<br>Radar backscatter<br>Polarization ratios<br>Temporal features] --> C
+    D1[XGBoost + RF Ensemble<br>(Crop Type)<br>Random Forest<br>(Stress Detection)<br>LSTM<br>(Growth Stages)] --> D
+    E1[Irrigation scheduling<br>Water requirement<br>Alerts & notifications] --> E
+    F1[React + TypeScript<br>Leaflet maps<br>Real‑time analytics<br>Advisory cards] --> F
+The diagram above illustrates the end‑to‑end data flow – from satellite imagery to actionable farmer advisories.
 
-✨ Key Features
-Feature	Description
-🌾 Crop Type Detection	Identifies wheat, rice, cotton, sugarcane, maize with 92% accuracy
-💧 Moisture Stress Detection	Classifies fields into Healthy / Moderate / Severe stress levels
-📈 Growth Stage Monitoring	Tracks germination → vegetative → flowering → maturity using LSTM
-⏰ Irrigation Advisory	Recommends irrigation timing and water volume (mm) with high confidence
-🗺️ Interactive Dashboard	Farm map, health indicators, trends, and alerts
-📱 Farmer‑Friendly	(Planned) Mobile app with multilingual support
-🏗️ System Architecture
-text
-┌─────────────────────────────────────────────────────────────────┐
-│                         DATA ACQUISITION                        │
-│  Sentinel‑1 SAR | Sentinel‑2 Optical | MODIS | ISRO Bhuvan    │
-│  Weather APIs (IMD) | Historical crop data                    │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                       PREPROCESSING                             │
-│  Cloud masking · Radiometric calibration · Geometric correction│
-│  Speckle filtering (SAR) · Resampling · Normalization         │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    FEATURE EXTRACTION                           │
-│  NDVI · NDWI · EVI · SAVI · Soil Moisture Index               │
-│  Radar backscatter · Polarization ratios · Temporal features  │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      AI / ML MODELS                             │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐           │
-│  │  XGBoost +  │  │  Random     │  │   LSTM      │           │
-│  │  RF Ensemble│  │  Forest     │  │  (Growth    │           │
-│  │  (Crop Type)│  │  (Stress)   │  │   Stages)   │           │
-│  └─────────────┘  └─────────────┘  └─────────────┘           │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    DECISION ENGINE                              │
-│  Irrigation scheduling · Water requirement · Alerts           │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      USER DASHBOARD                             │
-│  React + TypeScript · Leaflet maps · Real‑time analytics      │
-└─────────────────────────────────────────────────────────────────┘
 🛠️ Technology Stack
 Layer	Technology
 Frontend	React 18, TypeScript, TailwindCSS, Leaflet.js, Chart.js
@@ -255,4 +231,3 @@ Pradhan Mantri Krishi Sinchai Yojana for inspiration
 “Technology should serve the farmer – not the other way around.”
 
 🌱 CropOrbit AI – Smarter irrigation. Better harvests. A sustainable future.
-
