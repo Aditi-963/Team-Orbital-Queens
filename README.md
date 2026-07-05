@@ -1,6 +1,6 @@
 # 🌾 CropOrbit AI
 
-**Precision Farming Powered From Space**  
+**Precision Farming Powered from Space**  
 🚀 *ISRO BAH 2026 Hackathon – Team Orbital Queens*
 
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org)
