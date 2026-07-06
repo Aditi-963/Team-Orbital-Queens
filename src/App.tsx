@@ -12,6 +12,10 @@ import AiPredictions from './pages/AiPredictions';
 import IrrigationAdvisory from './pages/IrrigationAdvisory';
 import Reports from './pages/Reports';
 import Settings from './pages/Settings';
+import Alerts from './pages/Alerts';
+import Weather from './pages/Weather';
+import Advisory from './pages/Advisory';
+import MarketPrices from './pages/MarketPrices';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,6 +45,10 @@ export const App: React.FC = () => {
               <Route path="/farm-details" element={<FarmDetails />} />
               <Route path="/predictions" element={<AiPredictions />} />
               <Route path="/irrigation" element={<IrrigationAdvisory />} />
+              <Route path="/alerts" element={<Alerts />} />
+              <Route path="/weather" element={<Weather />} />
+              <Route path="/advisory" element={<Advisory />} />
+              <Route path="/market-prices" element={<MarketPrices />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/settings" element={<Settings />} />
             </Route>
