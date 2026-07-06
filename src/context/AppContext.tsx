@@ -38,9 +38,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [selectedFarm, setSelectedFarm] = useState<Farm>(mockFarms[0]);
   const [alerts, setAlerts] = useState<Alert[]>(mockAlerts);
   const [language, setLanguage] = useState<Language>('en');
-  const [theme, setTheme] = useState<ThemeMode>('dark');
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [user, setUser] = useState<User | null>(null);
+  const [theme, setTheme] = useState<ThemeMode>('light');
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
+  const [user, setUser] = useState<User | null>({
+    email: 'farmer@croporbit.ai',
+    name: 'Farmer',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  });
   const [pushNotifications, setPushNotifications] = useState<{ id: string; message: string; type: string }[]>([]);
 
   // Apply dark/light theme to document element

@@ -40,7 +40,7 @@ export const DashboardLayout: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-slate-950">
+    <div className="flex h-screen w-screen overflow-hidden bg-[#F8F9FA]">
       {/* Sidebar Navigation */}
       <Sidebar />
 
@@ -50,7 +50,7 @@ export const DashboardLayout: React.FC = () => {
         <Navbar />
 
         {/* Dynamic Page Content */}
-        <main className="flex-1 overflow-y-auto bg-slate-950/40 p-6">
+        <main className="flex-1 overflow-y-auto bg-[#F8F9FA] p-6">
           <Outlet />
         </main>
       </div>
