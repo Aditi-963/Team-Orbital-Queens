@@ -1,165 +1,139 @@
-# CropOrbit AI
+<div align="center">
 
-**Precision Farming Powered from Space**  
-*ISRO BAH 2026 Hackathon – Team Orbital Queens*
+# 🛰️ CropOrbit AI
 
-[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.68+-green.svg)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18.0+-blue.svg)](https://reactjs.org)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://tensorflow.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+### Precision Farming, Powered from Space — Zero Sensors, 100% Sky.
 
----
+**ISRO Bharatiya Antariksh Hackathon (BAH) 2026 · Team Orbital Queens**
 
-## Table of Contents
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Our Solution – CropOrbit AI](#our-solution--croporbit-ai)
-- [Key Features](#key-features)
-- [System Architecture](#system-architecture)
-- [Technology Stack](#technology-stack)
-- [Model Performance](#model-performance)
-- [Quick Start](#quick-start)
-- [API Endpoints](#api-endpoints)
-- [Project Structure](#project-structure)
-- [Impact & Future Scope](#impact--future-scope)
-- [Contributing](#contributing)
-- [Team – Orbital Queens](#team--orbital-queens)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.68+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+[Overview](#-overview) · [Problem](#-the-problem) · [Solution](#-our-solution) · [Architecture](#-system-architecture) · [Quick Start](#-quick-start) · [API](#-api-reference) · [Team](#-team--orbital-queens)
+
+</div>
 
 ---
 
-## Overview
+## 📡 Overview
 
-**CropOrbit AI** is an intelligent agriculture monitoring platform that combines **satellite remote sensing** with **artificial intelligence** to deliver actionable farm insights – all without any on‑ground sensors.
+**CropOrbit AI** turns free satellite imagery into a farmer's most trusted advisor. No IoT sensors, no ground hardware, no guesswork — just an ISRO-grade pipeline that watches every field from orbit and tells farmers exactly what their crop needs, before problems become visible to the naked eye.
 
-It automatically:
-- **Detects crop type** (wheat, rice, cotton, sugarcane, maize) with **92%** accuracy  
-- **Identifies moisture stress** (healthy / moderate / severe)  
-- **Tracks growth stages** (germination → vegetative → flowering → maturity)  
-- **Generates precise irrigation recommendations** – when and how much water to apply  
+| Capability | Detail |
+|---|---|
+| 🌾 **Crop Type Detection** | Wheat, rice, cotton, sugarcane, maize — **92% accuracy** |
+| 💧 **Moisture Stress Classification** | Healthy / Moderate / Severe, flagged early |
+| 📈 **Growth Stage Tracking** | Germination → Vegetative → Flowering → Maturity via LSTM |
+| 🚿 **Irrigation Advisory** | Exact timing + water volume (mm), not vague suggestions |
 
-> *“Democratizing precision agriculture using satellite intelligence.”*
-
----
-
-## Problem Statement
-
-Indian agriculture is plagued by:
-
-| Challenge | Impact |
-|-----------|--------|
-| Over‑irrigation | Wastes up to **50%** of water |
-| Late stress detection | Crop damage before visible symptoms |
-| Manual monitoring | Doesn't scale for large farms |
-| Expensive IoT sensors | Unaffordable for smallholders |
-| No data‑driven advice | Irrigation decisions based on guesswork |
-
-**Result:** India loses **₹45,000+ crore** annually due to inefficient irrigation and poor crop management.
+> *"Democratizing precision agriculture using satellite intelligence."*
 
 ---
 
-## Our Solution – CropOrbit AI
+## 🚨 The Problem
 
-We bridge space technology and the farmer’s field:
+Indian agriculture loses an estimated **₹45,000+ crore every year** to inefficient irrigation and reactive crop management.
 
-| Benefit | How We Deliver |
-|---------|----------------|
-| Satellite‑based monitoring | Free optical & SAR data (Sentinel‑1/2, MODIS, ISRO Bhuvan) |
-| AI‑powered analytics | Crop classification, stress detection, growth stage prediction |
-| Actionable irrigation advice | Tells **when** and **how much** water to apply |
-| No hardware required | Works entirely from space – zero on‑ground installation |
-| Nationwide scalability | Works on any farm across India |
-
----
-
-## Key Features
-
-| Feature | Description |
-|---------|-------------|
-| **Crop Type Detection** | Identifies 5 major crops with **92%** accuracy |
-| **Moisture Stress Detection** | Classifies stress into Healthy / Moderate / Severe |
-| **Growth Stage Monitoring** | Uses LSTM to track the entire crop lifecycle |
-| **Irrigation Advisory** | Recommends timing and water volume (in mm) |
-| **Interactive Dashboard** | Farm map, health indicators, trends, and alerts |
-| **Farmer‑Friendly** | (Planned) Mobile app with multilingual support |
+| Challenge | Real-World Impact |
+|---|---|
+| Over-irrigation | Wastes up to **50%** of water used |
+| Late stress detection | Damage occurs before it's visible to farmers |
+| Manual field monitoring | Doesn't scale beyond small plots |
+| IoT sensor cost | Unaffordable for the average smallholder |
+| No data-driven guidance | Irrigation decisions made on instinct, not evidence |
 
 ---
 
-## System Architecture
+## 🚀 Our Solution
 
-The platform follows a modular pipeline, from data acquisition to user-friendly visualization.
+CropOrbit AI closes the gap between space-grade Earth observation and the farmer's daily decisions:
+
+| We Deliver | How |
+|---|---|
+| **Satellite-based monitoring** | Free Sentinel-1/2, MODIS & ISRO Bhuvan data — no hardware install |
+| **AI-powered analytics** | Crop classification, stress detection, growth-stage prediction |
+| **Actionable advisories** | Tells farmers *when* to irrigate and *how much* water to use |
+| **Zero infrastructure cost** | Runs entirely from orbit — nothing to buy, wire, or maintain |
+| **Nationwide scalability** | Works for any farm, anywhere in India, from day one |
+
+---
+
+## 🏗 System Architecture
 
 ```mermaid
 flowchart TD
-    A[Data Acquisition] --> B[Preprocessing]
-    B --> C[Feature Extraction]
-    C --> D[AI / ML Models]
-    D --> E[Decision Engine]
-    E --> F[User Dashboard]
+    A[🛰️ Data Acquisition] --> B[⚙️ Preprocessing]
+    B --> C[🔍 Feature Extraction]
+    C --> D[🤖 AI / ML Models]
+    D --> E[🧠 Decision Engine]
+    E --> F[📊 Farmer Dashboard]
 
-    A1[Sentinel‑1 SAR<br>Sentinel‑2 Optical<br>MODIS / ISRO Bhuvan<br>Weather APIs] --> A
-    B1[Cloud masking<br>Radiometric calibration<br>Geometric correction<br>Speckle filtering<br>Resampling] --> B
-    C1[NDVI · NDWI · EVI · SAVI<br>Soil Moisture Index<br>Radar backscatter<br>Polarization ratios<br>Temporal features] --> C
-    D1[XGBoost + RF Ensemble<br>(Crop Type)<br>Random Forest<br>(Stress Detection)<br>LSTM<br>(Growth Stages)] --> D
-    E1[Irrigation scheduling<br>Water requirement<br>Alerts & notifications] --> E
-    F1[React + TypeScript<br>Leaflet maps<br>Real‑time analytics<br>Advisory cards] --> F
-If Mermaid is not supported, the architecture can be summarised as:
+    A1["Sentinel-1 SAR · Sentinel-2 Optical
+    MODIS · ISRO Bhuvan · Weather APIs"] --> A
+    B1["Cloud masking · Radiometric calibration
+    Geometric correction · Speckle filtering · Resampling"] --> B
+    C1["NDVI · NDWI · EVI · SAVI
+    Soil Moisture Index · Radar backscatter · Temporal features"] --> C
+    D1["XGBoost + RF Ensemble → Crop Type
+    Random Forest → Stress Detection
+    LSTM → Growth Stages"] --> D
+    E1["Irrigation scheduling
+    Water requirement calc · Alerts"] --> E
+    F1["React + TypeScript
+    Leaflet maps · Real-time analytics"] --> F
+```
 
-1. Data Acquisition
+<details>
+<summary><b>📋 Text-based pipeline (if Mermaid doesn't render)</b></summary>
 
-Sentinel‑1 SAR, Sentinel‑2 Optical, MODIS, ISRO Bhuvan, Weather APIs
+1. **Data Acquisition** — Sentinel-1 SAR, Sentinel-2 Optical, MODIS, ISRO Bhuvan, Weather APIs
+2. **Preprocessing** — Cloud masking, radiometric calibration, geometric correction, speckle filtering, resampling
+3. **Feature Extraction** — NDVI, NDWI, EVI, SAVI, Soil Moisture Index, radar backscatter, polarization ratios, temporal features
+4. **AI / ML Models** — XGBoost + Random Forest ensemble (crop type) · Random Forest (stress detection) · LSTM (growth stages)
+5. **Decision Engine** — Irrigation scheduling, water requirement calculation, alerts & notifications
+6. **User Dashboard** — React + TypeScript, Leaflet maps, real-time analytics, advisory cards
 
-2. Preprocessing
+</details>
 
-Cloud masking, radiometric calibration, geometric correction, speckle filtering, resampling
+---
 
-3. Feature Extraction
+## 🛠 Technology Stack
 
-NDVI, NDWI, EVI, SAVI, Soil Moisture Index, Radar backscatter, Polarization ratios, Temporal features
+<table>
+<tr><td><b>Frontend</b></td><td>React 18 · TypeScript · TailwindCSS · Leaflet.js · Chart.js</td></tr>
+<tr><td><b>Backend</b></td><td>FastAPI (Python) · PostgreSQL · Docker</td></tr>
+<tr><td><b>AI / ML</b></td><td>XGBoost · Random Forest · LSTM (TensorFlow) · scikit-learn · pandas · NumPy</td></tr>
+<tr><td><b>Satellite Processing</b></td><td>Google Earth Engine · Rasterio · GDAL · SNAP</td></tr>
+<tr><td><b>Data Sources</b></td><td>ESA Sentinel-1 & -2 · MODIS · ISRO Bhuvan · IMD Weather API</td></tr>
+<tr><td><b>Deployment</b></td><td>AWS / Azure / GCP, containerized with Docker</td></tr>
+</table>
 
-4. AI / ML Models
+---
 
-XGBoost + Random Forest Ensemble (Crop Type)
+## 📊 Model Performance
 
-Random Forest (Stress Detection)
+| Model | Accuracy | Precision | Recall | F1-Score |
+|---|:---:|:---:|:---:|:---:|
+| 🌾 Crop Classification | **92.0%** | 0.91 | 0.90 | 0.90 |
+| 💧 Moisture Stress Detection | **88.0%** | 0.87 | 0.86 | 0.86 |
+| 📈 Growth Stage Prediction | **85.0%** | 0.84 | 0.83 | 0.83 |
 
-LSTM (Growth Stages)
+---
 
-5. Decision Engine
+## ⚡ Quick Start
 
-Irrigation scheduling, water requirement, alerts & notifications
+### Prerequisites
+- Python 3.9+
+- Node.js 16+
+- PostgreSQL 12+
+- Docker *(optional)*
 
-6. User Dashboard
+### Clone & Install
 
-React + TypeScript, Leaflet maps, real‑time analytics, advisory cards
-
-Technology Stack
-Layer	Technology
-Frontend	React 18, TypeScript, TailwindCSS, Leaflet.js, Chart.js
-Backend	FastAPI (Python), PostgreSQL, Docker
-AI/ML	XGBoost, Random Forest, LSTM (TensorFlow), scikit‑learn, pandas, NumPy
-Satellite Processing	Google Earth Engine, Rasterio, GDAL, SNAP
-Data Sources	ESA Sentinel‑1 & ‑2, MODIS, ISRO Bhuvan, IMD Weather API
-Deployment	AWS / Azure / GCP (containerized with Docker)
-Model Performance
-Model	Accuracy	Precision	Recall	F1‑Score
-Crop Classification	92.0%	0.91	0.90	0.90
-Moisture Stress Detection	88.0%	0.87	0.86	0.86
-Growth Stage Prediction	85.0%	0.84	0.83	0.83
-Quick Start
-Prerequisites
-Python 3.9+
-
-Node.js 16+
-
-PostgreSQL 12+
-
-Docker (optional)
-
-Clone & Install
-bash
+```bash
 git clone https://github.com/yourusername/croporbit-ai.git
 cd croporbit-ai
 
@@ -174,9 +148,12 @@ cd ../frontend
 npm install
 
 # Environment variables
-cp .env.example .env   # Fill with your API keys (Google Earth Engine, etc.)
-Run the Application
-bash
+cp .env.example .env   # Fill in your API keys (Google Earth Engine, etc.)
+```
+
+### Run
+
+```bash
 # Backend (FastAPI)
 cd backend
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
@@ -184,24 +161,36 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 # Frontend (React)
 cd frontend
 npm start
-Access the app at http://localhost:3000 and API docs at http://localhost:8000/docs.
+```
 
-API Endpoints
-Endpoint	Method	Description
-/api/v1/detect-crop	POST	Detect crop type from satellite data
-/api/v1/moisture-stress	POST	Get moisture stress level and percentage
-/api/v1/irrigation-advisory	POST	Get irrigation recommendation (timing + water volume)
-/api/v1/farm-report/{farm_id}	GET	Complete analytics report for a farm
-Example Request
-json
+🌐 App: `http://localhost:3000` · 📚 API Docs: `http://localhost:8000/docs`
+
+---
+
+## 🔌 API Reference
+
+| Endpoint | Method | Description |
+|---|:---:|---|
+| `/api/v1/detect-crop` | `POST` | Detect crop type from satellite data |
+| `/api/v1/moisture-stress` | `POST` | Get moisture stress level and percentage |
+| `/api/v1/irrigation-advisory` | `POST` | Get irrigation recommendation (timing + water volume) |
+| `/api/v1/farm-report/{farm_id}` | `GET` | Complete analytics report for a farm |
+
+<details>
+<summary><b>Example: Irrigation Advisory</b></summary>
+
+**Request**
+```json
 POST /api/v1/irrigation-advisory
 {
   "lat": 30.5,
   "lon": 76.3,
   "crop_type": "Wheat"
 }
-Example Response
-json
+```
+
+**Response**
+```json
 {
   "recommendation": "Irrigate in 2-3 days",
   "water_needed": 15.0,
@@ -210,8 +199,15 @@ json
   "stress_level": "Moderate",
   "confidence": 0.85
 }
-Project Structure
-text
+```
+
+</details>
+
+---
+
+## 📁 Project Structure
+
+```
 croporbit-ai/
 ├── backend/
 │   ├── app/
@@ -219,74 +215,85 @@ croporbit-ai/
 │   │   ├── models/        # ML model wrappers
 │   │   ├── services/      # Business logic (satellite fetch, advisory)
 │   │   └── utils/         # Helpers (preprocessing, feature extraction)
-│   ├── data/              # Sample datasets
-│   ├── trained_models/    # Saved models (.pkl, .h5)
+│   ├── data/               # Sample datasets
+│   ├── trained_models/     # Saved models (.pkl, .h5)
 │   ├── main.py
 │   ├── requirements.txt
 │   └── Dockerfile
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── components/    # Reusable UI components
-│   │   ├── pages/         # Dashboard, Map, Analytics
-│   │   ├── services/      # API calls
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Dashboard, Map, Analytics
+│   │   ├── services/       # API calls
 │   │   └── utils/
 │   ├── package.json
 │   └── Dockerfile
-├── docs/                  # Documentation, whitepapers
-├── tests/                 # Unit & integration tests
+├── docs/                   # Documentation, whitepapers
+├── tests/                  # Unit & integration tests
 ├── docker-compose.yml
 ├── .env.example
 └── README.md
-Impact & Future Scope
-National Impact
-Supports PMKSY (Pradhan Mantri Krishi Sinchai Yojana) and Digital Agriculture Mission
+```
 
-Contributes to SDG 2 (Zero Hunger) and SDG 6 (Clean Water)
+---
 
-Can reduce water wastage by 25% and increase yield by 15%
+## 🌍 Impact & Future Scope
 
-Future Enhancements
-Mobile App (Android/iOS) with offline support
+### National Impact
+- Supports **PMKSY** (Pradhan Mantri Krishi Sinchai Yojana) and the **Digital Agriculture Mission**
+- Contributes to **SDG 2** (Zero Hunger) and **SDG 6** (Clean Water)
+- Projected to cut water wastage by **25%** and boost yield by **15%**
 
-Voice‑based advisories in regional languages (Hindi, Marathi, Gujarati)
+### Roadmap
+- [ ] 📱 Mobile app (Android/iOS) with offline support
+- [ ] 🗣️ Voice-based advisories in Hindi, Marathi, Gujarati
+- [ ] 🏛️ Government dashboard for regional monitoring
+- [ ] 🛡️ Crop insurance integration — risk assessment for insurers
+- [ ] ⛅ Weather forecast integration for sharper irrigation timing
 
-Government Dashboard for real‑time regional monitoring
+---
 
-Crop Insurance Integration – risk assessment for insurers
+## 🤝 Contributing
 
-Weather Forecast Integration for more accurate irrigation timing
+We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
 
-Contributing
-We welcome contributions! Please see CONTRIBUTING.md for guidelines.
+1. Fork the repo
+2. Create your feature branch — `git checkout -b feature/AmazingFeature`
+3. Commit your changes — `git commit -m 'Add AmazingFeature'`
+4. Push to the branch — `git push origin feature/AmazingFeature`
+5. Open a Pull Request
 
-Fork the repo
+---
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+## 👩‍🚀 Team — Orbital Queens
 
-Commit your changes (git commit -m 'Add AmazingFeature')
+| Name | Role |
+|---|---|
+| **Aditi Rajput** | Team Lead, AI/ML Engineer |
+| **Pranjal Gupta** | Satellite Data Processing |
+| **Vaidehi Wate** | Full Stack Developer |
+| **Hiranya Raut** | Domain Expert (Agriculture) |
 
-Push to the branch (git push origin feature/AmazingFeature)
+---
 
-Open a Pull Request
+## 📄 License
 
-Team – Orbital Queens
-Name	Role
-Aditi Rajput	Team Lead, AI/ML Engineer
-Pranjal Gupta	Satellite Data Processing
-Vaidehi Wate	Full Stack Developer
-Hiranya Raut	Domain Expert (Agriculture)
-License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
-Acknowledgments
-ISRO for organising BAH 2026 and promoting space‑based solutions
+## 🙏 Acknowledgments
 
-European Space Agency for open Sentinel data
+- **ISRO** — for organizing BAH 2026 and championing space-based solutions
+- **European Space Agency** — for open Sentinel data
+- **Google Earth Engine** — for satellite data processing infrastructure
+- **Pradhan Mantri Krishi Sinchai Yojana** — for the mission that inspired this build
 
-Google Earth Engine for satellite data processing
+---
 
-Pradhan Mantri Krishi Sinchai Yojana for inspiration
+<div align="center">
 
-“Technology should serve the farmer – not the other way around.”
-CropOrbit AI – Smarter irrigation. Better harvests. A sustainable future.
+*"Technology should serve the farmer — not the other way around."*
+
+**CropOrbit AI** — Smarter irrigation. Better harvests. A sustainable future. 🌾
+
+</div>
