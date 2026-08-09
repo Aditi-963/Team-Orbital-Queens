@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛰️ CropOrbit AI
+#  CropOrbit AI
 
 ### Precision Farming, Powered from Space — Zero Sensors, 100% Sky.
 
@@ -18,22 +18,22 @@
 
 ---
 
-## 📡 Overview
+##  Overview
 
 **CropOrbit AI** turns free satellite imagery into a farmer's most trusted advisor. No IoT sensors, no ground hardware, no guesswork — just an ISRO-grade pipeline that watches every field from orbit and tells farmers exactly what their crop needs, before problems become visible to the naked eye.
 
 | Capability | Detail |
 |---|---|
-| 🌾 **Crop Type Detection** | Wheat, rice, cotton, sugarcane, maize — **92% accuracy** |
-| 💧 **Moisture Stress Classification** | Healthy / Moderate / Severe, flagged early |
-| 📈 **Growth Stage Tracking** | Germination → Vegetative → Flowering → Maturity via LSTM |
-| 🚿 **Irrigation Advisory** | Exact timing + water volume (mm), not vague suggestions |
+|  **Crop Type Detection** | Wheat, rice, cotton, sugarcane, maize — **92% accuracy** |
+|  **Moisture Stress Classification** | Healthy / Moderate / Severe, flagged early |
+|  **Growth Stage Tracking** | Germination → Vegetative → Flowering → Maturity via LSTM |
+|  **Irrigation Advisory** | Exact timing + water volume (mm), not vague suggestions |
 
 > *"Democratizing precision agriculture using satellite intelligence."*
 
 ---
 
-## 🚨 The Problem
+##  The Problem
 
 Indian agriculture loses an estimated **₹45,000+ crore every year** to inefficient irrigation and reactive crop management.
 
@@ -47,7 +47,7 @@ Indian agriculture loses an estimated **₹45,000+ crore every year** to ineffic
 
 ---
 
-## 🚀 Our Solution
+##  Our Solution
 
 CropOrbit AI closes the gap between space-grade Earth observation and the farmer's daily decisions:
 
@@ -61,15 +61,15 @@ CropOrbit AI closes the gap between space-grade Earth observation and the farmer
 
 ---
 
-## 🏗 System Architecture
+##  System Architecture
 
 ```mermaid
 flowchart TD
-    A[🛰️ Data Acquisition] --> B[⚙️ Preprocessing]
-    B --> C[🔍 Feature Extraction]
-    C --> D[🤖 AI / ML Models]
-    D --> E[🧠 Decision Engine]
-    E --> F[📊 Farmer Dashboard]
+    A[ Data Acquisition] --> B[ Preprocessing]
+    B --> C[ Feature Extraction]
+    C --> D[ AI / ML Models]
+    D --> E[ Decision Engine]
+    E --> F[ Farmer Dashboard]
 
     A1["Sentinel-1 SAR · Sentinel-2 Optical
     MODIS · ISRO Bhuvan · Weather APIs"] --> A
@@ -87,7 +87,7 @@ flowchart TD
 ```
 
 <details>
-<summary><b>📋 Text-based pipeline (if Mermaid doesn't render)</b></summary>
+<summary><b> Text-based pipeline (if Mermaid doesn't render)</b></summary>
 
 1. **Data Acquisition** — Sentinel-1 SAR, Sentinel-2 Optical, MODIS, ISRO Bhuvan, Weather APIs
 2. **Preprocessing** — Cloud masking, radiometric calibration, geometric correction, speckle filtering, resampling
@@ -100,7 +100,7 @@ flowchart TD
 
 ---
 
-## 🛠 Technology Stack
+##  Technology Stack
 
 <table>
 <tr><td><b>Frontend</b></td><td>React 18 · TypeScript · TailwindCSS · Leaflet.js · Chart.js</td></tr>
@@ -113,17 +113,17 @@ flowchart TD
 
 ---
 
-## 📊 Model Performance
+##  Model Performance
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|:---:|:---:|:---:|:---:|
-| 🌾 Crop Classification | **92.0%** | 0.91 | 0.90 | 0.90 |
-| 💧 Moisture Stress Detection | **88.0%** | 0.87 | 0.86 | 0.86 |
-| 📈 Growth Stage Prediction | **85.0%** | 0.84 | 0.83 | 0.83 |
+|  Crop Classification | **92.0%** | 0.91 | 0.90 | 0.90 |
+|  Moisture Stress Detection | **88.0%** | 0.87 | 0.86 | 0.86 |
+|  Growth Stage Prediction | **85.0%** | 0.84 | 0.83 | 0.83 |
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -163,11 +163,11 @@ cd frontend
 npm start
 ```
 
-🌐 App: `http://localhost:3000` · 📚 API Docs: `http://localhost:8000/docs`
+ App: `http://localhost:3000` ·  API Docs: `http://localhost:8000/docs`
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 | Endpoint | Method | Description |
 |---|:---:|---|
@@ -205,7 +205,7 @@ POST /api/v1/irrigation-advisory
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 croporbit-ai/
@@ -238,7 +238,7 @@ croporbit-ai/
 
 ---
 
-## 🌍 Impact & Future Scope
+##  Impact & Future Scope
 
 ### National Impact
 - Supports **PMKSY** (Pradhan Mantri Krishi Sinchai Yojana) and the **Digital Agriculture Mission**
@@ -246,15 +246,15 @@ croporbit-ai/
 - Projected to cut water wastage by **25%** and boost yield by **15%**
 
 ### Roadmap
-- [ ] 📱 Mobile app (Android/iOS) with offline support
-- [ ] 🗣️ Voice-based advisories in Hindi, Marathi, Gujarati
-- [ ] 🏛️ Government dashboard for regional monitoring
-- [ ] 🛡️ Crop insurance integration — risk assessment for insurers
-- [ ] ⛅ Weather forecast integration for sharper irrigation timing
+- [ ]  Mobile app (Android/iOS) with offline support
+- [ ]  Voice-based advisories in Hindi, Marathi, Gujarati
+- [ ]  Government dashboard for regional monitoring
+- [ ]  Crop insurance integration — risk assessment for insurers
+- [ ]  Weather forecast integration for sharper irrigation timing
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
 
@@ -266,7 +266,7 @@ We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guideline
 
 ---
 
-## 👩‍🚀 Team — Orbital Queens
+##  Team — Orbital Queens
 
 | Name | Role |
 |---|---|
@@ -277,11 +277,11 @@ We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guideline
 
 ---
 
-## 📄 License
+##  License
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **ISRO** — for organizing BAH 2026 and championing space-based solutions
 - **European Space Agency** — for open Sentinel data
